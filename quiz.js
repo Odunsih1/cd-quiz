@@ -1,10 +1,10 @@
 let namee = JSON.parse(localStorage.getItem("name"));
 let bdy = document.getElementById("h1");
-bdy.innerHTML = `Welcome ${namee}!`;
+bdy.innerHTML = `${namee}!`;
 console.log(namee);
 
 const params = new URLSearchParams({
-  limit: "5", // Number of questions to fetch
+  limit: "2", // Number of questions to fetch
   category: "", // Category of questions
   difficulty: "", // Difficulty level
 });
@@ -112,12 +112,12 @@ function renderQuestion(data, index) {
         answers.answer_d
       }" /> ${answers.answer_d}</label><br/>
     </div>
-    <button onclick="submitAnswer(${index}, ${JSON.stringify(
+    <button class="m-5 pr-[10px] pl-[10px] bg-green-500 text-white text-[20px] rounded-[50px] mt-10 transition ease-in-out delay-150  focus:-translate-y-1 focus:scale-110 hover:bg-green-600 duration-300 " onclick="submitAnswer(${index}, ${JSON.stringify(
     correctAnswers
   ).replace(/"/g, "&quot;")}, ${JSON.stringify(data).replace(
     /"/g,
     "&quot;"
-  )})">Submit</button>
+  )})">Next</button>
   `;
 }
 
@@ -174,7 +174,7 @@ function showResults(data) {
             ? entry.userSelected.join(", ")
             : "No answer selected"
         }</p>
-        <p><strong>Result:</strong> ${
+        <p class="mb-5"><strong>Result:</strong> ${
           entry.isCorrect ? "Correct ✅" : "Incorrect ❌"
         }</p>
       </div>
@@ -186,9 +186,18 @@ function showResults(data) {
     <p>Category: ${category}</p>
     <p>Total Questions: ${totalQuestions}</p>
     <p>Correct Answers: ${score}</p>
-    <p>Score: ${((score / totalQuestions) * 100).toFixed(2)}%</p>
+    <p class="mb-5">Score: ${((score / totalQuestions) * 100).toFixed(2)}%</p>
+    <hr/>
     ${reviewHtml}
   `;
+  //   if ((score / totalQuestions) * 100 < 50) {
+  //     document.getElementById(
+  //       "questions2"
+  //     ).innerHTML = `<h1>Sorry you failed the quiz</h1>`;
+  //   } else if ((score / totalQuestions) * 100 >= 50) {
+  //     document.getElementById(
+  //       "questions2"
+  //     ).innerHTML = `<h1>Congratulations you passed the quiz</h1>`;
 
   // Clear quiz data from localStorage
   localStorage.removeItem("correctAnswers");
