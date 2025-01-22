@@ -4,7 +4,7 @@ bdy.innerHTML = `${namee}!`;
 console.log(namee);
 
 const params = new URLSearchParams({
-  limit: "2", // Number of questions to fetch
+  limit: "5", // Number of questions to fetch
   category: "", // Category of questions
   difficulty: "", // Difficulty level
 });
