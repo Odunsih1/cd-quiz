@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <section>
+        <h1 id="h1"></h1>
+        <menu>
+            <h1>To start quiz select from the options below</h1>
+            <select id="categories">
+                <option value="">Select category</option>
+                <option value="Next.js">Next.js</option>
+                <option value="React">React</option>
+                <option value="Linux">Linux</option>
+                <option value="nodeJS">nodeJS</option>
+            </select>
+            <select name="" id="level">
+                <option value="">Select level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button onclick="submit()">submit</button>
+        </menu>
+        <main >
+            <div id="questions1"></div>
+            <div id="questions2"></div>
+            <div></div>
+            <div></div>
+            <!-- <button onclick="check()">check</button> -->
+        </main>
+    </section>
+    <script src="quiz.js"></script>
+</body>
+</html>
