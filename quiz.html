@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
     <title>Quiz</title>
 </head>
-<body class="sm:w-[60%] w-[100%] bg-slate-100 flex flex-col items-center justify-center m-auto">
+<body id="bdy" class="sm:w-[60%] w-[100%] bg-slate-100 flex flex-col items-center justify-center m-auto">
+    <button onclick="dark()">dark</button>
+    <div id="pops" class="popup">
+    </div>
     <section >
         <h1 class="text-[30px] text-center m-[20px]" >Welcome <i><span class="text-green-600" id="h1"></span></i></h1>
         <menu class="flex flex-col items-center justify-center text-center m-auto text-[20px]">

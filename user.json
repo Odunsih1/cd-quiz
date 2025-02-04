@@ -1,0 +1,151 @@
+{
+    "quiz": {
+      "HTML": [
+        {
+          "question": "What does HTML stand for?",
+          "options": ["Hyper Text Markup Language", "High Tech Markup Language", "Hyperlink and Text Management Language", "Home Tool Markup Language"],
+          "answer": "Hyper Text Markup Language"
+        },
+        {
+          "question": "Which HTML tag is used to define an internal stylesheet?",
+          "options": ["<script>", "<style>", "<css>", "<link>"],
+          "answer": "<style>"
+        },
+        {
+          "question": "What is the correct HTML element for inserting a line break?",
+          "options": ["<break>", "<br>", "<lb>", "<newline>"],
+          "answer": "<br>"
+        },
+        {
+          "question": "Which tag is used to create a hyperlink in HTML?",
+          "options": ["<a>", "<link>", "<href>", "<nav>"],
+          "answer": "<a>"
+        },
+        {
+          "question": "Which attribute specifies an alternate text for an image?",
+          "options": ["title", "alt", "src", "href"],
+          "answer": "alt"
+        },
+        {
+          "question": "Which HTML tag is used for the largest heading?",
+          "options": ["<h6>", "<h1>", "<head>", "<header>"],
+          "answer": "<h1>"
+        },
+        {
+          "question": "Which tag is used to create a numbered list?",
+          "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+          "answer": "<ol>"
+        },
+        {
+          "question": "Which attribute is used to open a hyperlink in a new tab?",
+          "options": ["target='_self'", "target='_blank'", "target='_new'", "target='open'"],
+          "answer": "target='_blank'"
+        },
+        {
+          "question": "What does the <title> tag define?",
+          "options": ["Main heading", "Footer content", "Browser tab title", "Meta description"],
+          "answer": "Browser tab title"
+        },
+        {
+          "question": "What is the purpose of the <meta> tag in HTML?",
+          "options": ["To include external stylesheets", "To provide metadata", "To create navigation", "To embed multimedia"],
+          "answer": "To provide metadata"
+        }
+      ],
+      "CSS": [
+        {
+          "question": "What does CSS stand for?",
+          "options": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+          "answer": "Cascading Style Sheets"
+        },
+        {
+          "question": "Which property is used to change the background color?",
+          "options": ["color", "background-color", "bgcolor", "bg-style"],
+          "answer": "background-color"
+        },
+        {
+          "question": "Which CSS property is used to control the text size?",
+          "options": ["font-style", "text-size", "font-size", "text-style"],
+          "answer": "font-size"
+        },
+        {
+          "question": "Which selector targets all elements in CSS?",
+          "options": ["*", "#", "%", "&"],
+          "answer": "*"
+        },
+        {
+          "question": "Which property is used to make text bold?",
+          "options": ["bold", "font-bold", "text-weight", "font-weight"],
+          "answer": "font-weight"
+        },
+        {
+          "question": "Which CSS property is used to add space between elements?",
+          "options": ["padding", "margin", "spacing", "border-spacing"],
+          "answer": "margin"
+        },
+        {
+          "question": "Which property is used to change the text color?",
+          "options": ["text-color", "color", "font-color", "text-style"],
+          "answer": "color"
+        },
+        {
+          "question": "How do you apply a class selector in CSS?",
+          "options": ["#classname", ".classname", "classname", "*classname"],
+          "answer": ".classname"
+        },
+        {
+          "question": "Which value of 'position' property will make an element fixed on screen?",
+          "options": ["relative", "absolute", "fixed", "static"],
+          "answer": "fixed"
+        },
+        {
+          "question": "Which CSS property controls the visibility of an element?",
+          "options": ["display", "visibility", "opacity", "show"],
+          "answer": "visibility"
+        }
+      ],
+      "JavaScript": [
+        {
+          "question": "What is JavaScript primarily used for?",
+          "options": ["Styling webpages", "Creating dynamic content", "Database management", "Server-side scripting"],
+          "answer": "Creating dynamic content"
+        },
+        {
+          "question": "Which keyword declares a variable in JavaScript?",
+          "options": ["var", "let", "const", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "Which method is used to display a message in the browser console?",
+          "options": ["console.log()", "print()", "alert()", "display()"],
+          "answer": "console.log()"
+        },
+        {
+          "question": "Which symbol is used for single-line comments in JavaScript?",
+          "options": ["//", "<!-- -->", "**", "/* */"],
+          "answer": "//"
+        },
+        {
+          "question": "Which function is used to parse a string to an integer?",
+          "options": ["parseInt()", "parseFloat()", "toInteger()", "int()"],
+          "answer": "parseInt()"
+        },
+        {
+          "question": "Which operator is used for strict equality in JavaScript?",
+          "options": ["==", "===", "!=", "=!"] ,
+          "answer": "==="
+        },
+        {
+          "question": "Which keyword is used to define an asynchronous function?",
+          "options": ["async", "await", "function", "promise"],
+          "answer": "async"
+        },
+        {
+          "question": "Which object method is used to parse JSON in JavaScript?",
+          "options": ["JSON.parse()", "JSON.stringify()", "JSON.toObject()", "JSON.decode()"],
+          "answer": "JSON.parse()"
+        }
+      ]
+    }
+  }
+  

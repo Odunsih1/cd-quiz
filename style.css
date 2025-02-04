@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pop {
+    background-color: #22c55e;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 2px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: width 1s;
+    animation-name: shake;
+    animation-duration: .5s;
+}
+
+.pop:hover {
+    width: 301px;
+}
+
+.popup {
+    display: none;
+}
+
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@media (max-width: 480px) {
+    .pop {
+        width: 90%;
+        font-size: 17px;
+    }
+}

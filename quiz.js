@@ -49,23 +49,36 @@ const API_KEY = "NtIMAlsNUBEBdD9TXe4FHt7KILeO52g1GTVgWUr5";
 
 async function getQuest() {
   const url = "https://quizapi.io/api/v1/questions";
-
-  const response = await fetch(`${url}?${params.toString()}`, {
-    method: "GET",
-    headers: {
-      "X-Api-Key": API_KEY, // Pass API key in headers
-    },
-  });
-  const data = await response.json();
-  console.log(data);
-  startQuiz(data);
-  //   info2(data);
+  try {
+    const response = await fetch(`${url}?${params.toString()}`, {
+      method: "GET",
+      headers: {
+        "X-Api-Key": API_KEY, // Pass API key in headers
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+    startQuiz(data);
+    //   info2(data);
+  } catch (e) {
+    let pops = document.getElementById("pops");
+    setTimeout(() => {
+      pops.classList.remove("popup");
+      pops.classList.add("pop");
+      pops.innerHTML = `<h2>Unable to get questions at the moment, try later.</h2>`;
+      setTimeout(() => {
+        pops.classList.add("popup");
+        pops.classList.remove("pop");
+      }, 5000);
+    }, 0);
+    console.warn(e);
+  }
 }
 
 let currentQuestionIndex = 0;
 let correctCount = 0;
 
-// Fetch quiz data (assuming it's available in the `data` variable)
+// Fetch quiz data
 function startQuiz(data) {
   // Start the quiz with the fetched data
   renderQuestion(data, 0);
@@ -344,3 +357,9 @@ function showResults(data) {
 
 // // Example HTML: <select id="categories-dropdown"></select>
 // renderCategoriesDropdown();
+
+// function dark() {
+//   const dark = document.getElementById("bdy");
+//   dark.classList.add("bg-black");
+//   dark.classList.add("text-white");
+// }

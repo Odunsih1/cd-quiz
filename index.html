@@ -9,17 +9,25 @@
     <title>Quiz</title>
 </head>
 <body class="bg-green-950">
-    <div class="bg-white p-10 rounded-[50%] w-[180px] m-auto mt-10 ">
-        <h1 class="text-[40px] font-bold "><span class="text-green-300"><i>cd</i></span>Quiz</h1>
-    </div>
-    <div  class="flex flex-col items-center justify-center h-screen text-center">
-        
-        <form class="flex flex-col p- [20px]" action="">
-            <label class="text-[25px] font-semibold text-white">Enter your name</label>
-            <input id="nameInput" class="text-[25px] rounded-[50px] p-2 mt-10 transition ease-in-out delay-150  focus:-translate-y-1 focus:scale-110 focus:bg-indigo-100 duration-300 " type="text" placeholder="Henry" required>
-            <button id="startBtn" class="bg-green-500 text-white text-[25px] rounded-[50px] p-2 mt-10 transition ease-in-out delay-150  focus:-translate-y-1 focus:scale-110 hover:bg-green-600 duration-300 ">Start</button>
-        </form>
-    </div>
+    <main>
+        <div class="bg-white p-10 rounded-[50%] w-[180px] m-auto mt-10 ">
+            <h1 class="text-[40px] font-bold "><span class="text-green-300"><i>cd</i></span>Quiz</h1>
+        </div>
+        <div id="pops" class="popup">
+            <h2>Please, enter your name</h2>
+        </div>
+        <div  class="flex flex-col items-center justify-center h-screen text-center">
+            
+            <form class="flex flex-col p-[20px]" action="./user.json" method="post">
+                <label class="sm:text-[25px] text-[20px] font-semibold text-white">Enter your name</label>
+                <input id="nameInput" class="sm:text-[25px] text-[20px] rounded-[50px] p-2 mt-10 transition ease-in-out delay-150  focus:-translate-y-1 focus:scale-110 focus:bg-indigo-100 duration-300 " type="text" placeholder="Henry" required>
+                <button id="startBtn" type="button" class="bg-green-500 text-white sm:text-[25px] text-[20px] rounded-[50px] p-2 mt-10 transition ease-in-out delay-150  focus:-translate-y-1 focus:scale-110 hover:bg-green-600 duration-300 ">Start</button>
+            </form>
+        </div>
+    </main>
+    <footer class="flex justify-center bg-green-500 text-white">
+        <p>&copy; <span id="foot"></span></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
