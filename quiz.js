@@ -21,7 +21,16 @@ function submit() {
   } else if (category.value === "Linux") {
     params.set("category", "Linux");
   } else {
-    alert("select category");
+    let pops = document.getElementById("pops");
+    setTimeout(() => {
+      pops.classList.remove("popup");
+      pops.classList.add("pop");
+      pops.innerHTML = `<h2>Select question.</h2>`;
+      setTimeout(() => {
+        pops.classList.add("popup");
+        pops.classList.remove("pop");
+      }, 5000);
+    }, 0);
   }
 
   //   switch (category.value) {
@@ -40,7 +49,16 @@ function submit() {
   } else if (level.value === "hard") {
     params.set("difficulty", "hard");
   } else {
-    alert("select a level");
+    //   let pops = document.getElementById("pops");
+    //   setTimeout(() => {
+    //     pops.classList.remove("popup");
+    //     pops.classList.add("pop");
+    //     pops.innerHTML = `<h2>Select a level.</h2>`;
+    //     setTimeout(() => {
+    //       pops.classList.add("popup");
+    //       pops.classList.remove("pop");
+    //     }, 5000);
+    //   }, 0);
   }
   getQuest();
 }
@@ -57,6 +75,9 @@ async function getQuest() {
       },
     });
     const data = await response.json();
+    const response1 = await fetch("./user.json");
+    const data1 = await response1.json();
+    console.log(data1);
     console.log(data);
     startQuiz(data);
     //   info2(data);
@@ -74,7 +95,7 @@ async function getQuest() {
     console.warn(e);
   }
 }
-
+getQuest();
 let currentQuestionIndex = 0;
 let correctCount = 0;
 
