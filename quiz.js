@@ -63,7 +63,7 @@ function submit() {
   getQuest();
 }
 
-const API_KEY = "NtIMAlsNUBEBdD9TXe4FHt7KILeO52g1GTVgWUr5";
+const API_KEYS = process.env.API_KEY;
 
 async function getQuest() {
   const url = "https://quizapi.io/api/v1/questions";
@@ -71,7 +71,7 @@ async function getQuest() {
     const response = await fetch(`${url}?${params.toString()}`, {
       method: "GET",
       headers: {
-        "X-Api-Key": API_KEY, // Pass API key in headers
+        "X-Api-Key": API_KEYS, // Pass API key in headers
       },
     });
     const data = await response.json();
